@@ -1,9 +1,11 @@
 <script>
   import AppNav from './components/AppNav.vue';
+  import AppContent from './components/AppContent.vue';
 
 export default {
   components: {
     AppNav,
+    AppContent,
   }
 }
 </script>
@@ -11,6 +13,7 @@ export default {
 <template>
   <div id="container">
     <AppNav></AppNav>
+    <AppContent></AppContent>
   </div>
 </template>
 
@@ -20,6 +23,10 @@ export default {
 
   #container {
     @include centered;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
   }
 
 </style>
