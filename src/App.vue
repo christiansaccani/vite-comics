@@ -9,11 +9,17 @@ export default {
 </script>
 
 <template>
-
-  <AppNav></AppNav>
-
+  <div id="container">
+    <AppNav></AppNav>
+  </div>
 </template>
 
 <style lang="scss">
+  @use './style/variables' as *;
+  @use './style/mixins' as *;
+
+  #container {
+    @include centered;
+  }
 
 </style>
