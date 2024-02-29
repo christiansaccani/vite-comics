@@ -67,20 +67,21 @@ export default {
                     height: 100%;
                     display: flex;
                     justify-content: flex-end;
+                    align-items: center;
                     gap: 1em;
 
                     font-weight: 500;
 
                     li {
+                        display: flex;
+                        align-items: center;
+
                         height: 100%;
                         list-style: none;
                         text-transform: uppercase;
-                        vertical-align: center;
                     }
                 }
-            }
-
-            
+            }        
         }
     }
 </style>
