@@ -22,7 +22,7 @@ export default {
                     title: "comic shop locator"
                 },
                 {
-                    img: "public/img/buy-dc-power-visa.svg",
+                    img: "/img/buy-dc-power-visa.svg",
                     title: "dc power visa"
                 },
             ],
