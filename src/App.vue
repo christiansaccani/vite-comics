@@ -1,11 +1,13 @@
 <script>
   import AppNav from './components/AppNav.vue';
   import AppContent from './components/AppContent.vue';
+  import AppMedia from './components/AppMedia.vue'
 
 export default {
   components: {
     AppNav,
     AppContent,
+    AppMedia,
   }
 }
 </script>
@@ -14,6 +16,7 @@ export default {
   <div id="container">
     <AppNav></AppNav>
     <AppContent></AppContent>
+    <AppMedia></AppMedia>
   </div>
 </template>
 

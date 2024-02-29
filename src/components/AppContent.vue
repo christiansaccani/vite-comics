@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <section>
+    <section id="contentSection">
         <div>
             --> Content Goes Here <--
         </div>
@@ -16,9 +16,8 @@ export default {
     @use '../style/variables' as *;
     @use '../style/mixins' as *;
 
-    section {
+    #contentSection {
         @include centered;
-        
 
         height: 130px;
         width: 100%;
