@@ -3,6 +3,7 @@
   import AppContent from './components/AppContent.vue';
   import AppMedia from './components/AppMedia.vue';
   import AppLinks from './components/AppLinks.vue';
+  import AppFooter from './components/AppFooter.vue';
 
 export default {
   components: {
@@ -10,6 +11,7 @@ export default {
     AppContent,
     AppMedia,
     AppLinks,
+    AppFooter,
   }
 }
 </script>
@@ -20,6 +22,7 @@ export default {
     <AppContent></AppContent>
     <AppMedia></AppMedia>
     <AppLinks></AppLinks>
+    <AppFooter></AppFooter>
   </div>
 </template>
 

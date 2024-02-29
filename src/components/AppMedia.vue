@@ -56,6 +56,8 @@ export default {
 
         background-color: $primaryColor;
         color: white;
+
+        z-index: 2;
         
         div {
             max-width: $maxWidth;

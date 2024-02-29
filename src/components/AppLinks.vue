@@ -41,6 +41,8 @@ export default {
                     </li>
                 </ul>
             </div>
+
+            <img src="/img/dc-logo-bg.png" alt="">
         </div>
     </section>
 
@@ -63,12 +65,14 @@ export default {
         color: white;
 
         #link-container {
+            position: relative;
+
             max-width: $maxWidth;
             width: 100%;
             max-height: 100%;
 
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-between;
 
             margin-top: 40px;
 
@@ -100,7 +104,15 @@ export default {
                         color: #959595;
                     }
                 }
-            }            
+            }
+
+            img {
+                position: absolute;
+                right: 0px;
+                top: -105px;
+                height: 140%;
+                z-index: 1;
+            }          
         }
     }
 
