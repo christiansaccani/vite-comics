@@ -6,6 +6,7 @@ export default {
 
 <template>
     <section id="contentSection">
+        <img src="/img/jumbotron.jpg" alt="">
         <div>
             --> Content Goes Here <--
         </div>
@@ -18,12 +19,21 @@ export default {
 
     #contentSection {
         @include centered;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        height: 130px;
         width: 100%;
 
         background-color: #171617;
         color: white;
+
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: center top;
+        }
 
         div {
             @include maxwidthed($maxWidth);
