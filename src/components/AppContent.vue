@@ -95,16 +95,19 @@ export default {
     <section id="contentSection">
         <img src="/img/jumbotron.jpg" alt="">
         <div>
-            <div id="current-series">current series</div>
-            <div id="prova">
-                <div id="comic-list">
-                    <ComicItem 
-                        v-for="currentComic in comics" 
-                        :comicName="currentComic.series" 
-                        :comicImage="currentComic.thumb"
-                    ></ComicItem>
-                </div>
+            <div id="current-series">
+                current series
             </div>
+
+            <div id="comic-list">
+                <ComicItem 
+                    v-for="currentComic in comics" 
+                    :comicName="currentComic.series" 
+                    :comicImage="currentComic.thumb"
+                ></ComicItem>
+            </div>
+
+            <button>load more</button>
         </div>
     </section>
 </template>
@@ -131,15 +134,18 @@ export default {
         }
 
         div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
             @include maxwidthed($maxWidth);
             width: 100%;
+            margin-bottom: 20px;
 
             font-size: x-large;
             font-weight: 600;
 
             position: relative;
-
-            padding-top: 15px;
 
             #current-series {
                 @include centered;
@@ -160,8 +166,21 @@ export default {
                 display: flex;
                 flex-flow: row wrap;
                 justify-content: space-evenly;
+                align-items: flex-start;
 
-                margin-bottom: 40px;
+                margin-top: 50px;
+            }
+
+            button {
+                border: none;
+                padding: 12px 60px;
+
+                text-transform: uppercase;
+                font-size: small;
+                font-weight: 600;
+
+                background-color: $primaryColor;
+                color: white;
             }
         }
     }

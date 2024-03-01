@@ -25,6 +25,11 @@ export default {
 
 .comic {
     max-width: 190px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    gap: .5em;
 
     img {
         height: 190px !important;
