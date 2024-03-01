@@ -35,15 +35,13 @@ export default {
     footer {
         @include centered;
 
-        height: calc(100vh - 370px - 130px - 155px - 120px);
+        height: 136px;
         width: 100%;
 
         background-color: #171617;
 
-        z-index: 2;
-
         div {
-            max-width: $maxWidth;
+            @include maxwidthed($maxWidth);
             width: 100%;
             height: 100%;
 
@@ -55,9 +53,10 @@ export default {
                 padding: 1em;
                 border: 2px solid $primaryColor;
 
-                width: 160px;
+                white-space: nowrap;
 
                 text-decoration: none;
+                text-align: center;
                 color: white;
             }
 

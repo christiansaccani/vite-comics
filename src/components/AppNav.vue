@@ -54,7 +54,7 @@ export default {
             justify-content: space-between;
             align-items: center;
 
-            max-width: $maxWidth;
+            @include maxwidthed($maxWidth);
             width: 100%;
             height: 100%;
 

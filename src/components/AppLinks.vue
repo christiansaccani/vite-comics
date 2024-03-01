@@ -67,14 +67,16 @@ export default {
         #link-container {
             position: relative;
 
-            max-width: $maxWidth;
+            @include maxwidthed($maxWidth);
             width: 100%;
             max-height: 100%;
 
             display: flex;
             justify-content: space-between;
 
-            margin-top: 40px;
+            padding-top: 24px;
+
+            overflow: hidden;
 
             div {
                 display: flex;
@@ -108,11 +110,12 @@ export default {
 
             img {
                 position: absolute;
-                right: 0px;
-                top: -105px;
+                right: 0;
+                top: 50%;
+                transform: translateY(-52.5%);
                 height: 140%;
-                z-index: 1;
-            }          
+            }
+   
         }
     }
 

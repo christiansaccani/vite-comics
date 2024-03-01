@@ -26,7 +26,7 @@ export default {
         color: white;
 
         div {
-            max-width: $maxWidth;
+            @include maxwidthed($maxWidth);
             width: 100%;
 
             font-size: x-large;

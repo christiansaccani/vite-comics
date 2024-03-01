@@ -56,11 +56,9 @@ export default {
 
         background-color: $primaryColor;
         color: white;
-
-        z-index: 2;
         
         div {
-            max-width: $maxWidth;
+            @include maxwidthed($maxWidth);
             width: 100%;
 
             font-size: medium;
