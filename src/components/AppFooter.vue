@@ -15,7 +15,7 @@ export default {
     <footer>
         <div>
             <a href="#">SIGN-UP NOW</a>
-            <div id="socials-container">
+            <div>
                 <p>FOLLOW US</p>
                 <ul id="socials-line">
                     <li v-for="currentSocial in socials">
@@ -38,7 +38,7 @@ export default {
         height: 136px;
         width: 100%;
 
-        background-color: #171617;
+        background-color: #303030;
 
         div {
             @include maxwidthed($maxWidth);
@@ -51,16 +51,17 @@ export default {
             
             a {
                 padding: 1em;
-                border: 2px solid $primaryColor;
+                border: 3px solid $primaryColor;
 
                 white-space: nowrap;
+                font-weight: 500;
 
                 text-decoration: none;
                 text-align: center;
                 color: white;
             }
 
-            #socials-container {
+            div {
                 display: flex;
                 justify-content: flex-end;
                 gap: 1.5em;

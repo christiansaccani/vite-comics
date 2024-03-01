@@ -16,9 +16,21 @@ export default {
                 'news',
                 'shop',
             ],
+
+            activeIndex: 0,
+        }
+    },
+
+    methods: {
+        changeActiveIndex(newIndex) {
+            if (newIndex != this.activeIndex) {
+                this.activeIndex = newIndex
+            }
         }
     }
 }
+
+
 </script>
 
 <template>
@@ -28,7 +40,9 @@ export default {
             <img id="logo" src="/img/dc-logo.png">
             <div id="menu">
                 <ul>
-                    <li v-for="currentLink in links">
+                    <li v-for="(currentLink, index) in links"
+                    @click="changeActiveIndex(index)"
+                    :class="{'active': index === activeIndex}">
                         {{ currentLink }}
                     </li>
                 </ul>
@@ -79,6 +93,26 @@ export default {
                         height: 100%;
                         list-style: none;
                         text-transform: uppercase;
+
+                        cursor: pointer;
+                        position: relative;
+
+                        &.active,
+                        &:hover {
+                            color: $primaryColor;
+                        }  
+
+                        &.active::before,
+                        &:hover::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 7px;
+                        width: 100%;
+                        background-color: $primaryColor;
+                        }
+                         
                     }
                 }
             }        

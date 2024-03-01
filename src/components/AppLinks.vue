@@ -30,7 +30,7 @@ export default {
 <template>
 
     <section id="linkSection">
-        <div id="link-container">
+        <div id="linkSection-container">
             <div>
                 <ul v-for="currentTitle in links">
                     <div class="linkTitle">
@@ -64,7 +64,7 @@ export default {
 
         color: white;
 
-        #link-container {
+        #linkSection-container {
             position: relative;
 
             @include maxwidthed($maxWidth);
@@ -84,9 +84,6 @@ export default {
                 gap: 2em;
                 
                 ul {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
 
                     .linkTitle {
                         font-size: large;
